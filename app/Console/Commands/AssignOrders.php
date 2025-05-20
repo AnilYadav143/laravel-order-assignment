@@ -28,7 +28,7 @@ class AssignOrders extends Command
      */
     public function handle()
     {
-        $time_duration = now()->subMinutes(3);
+        $time_duration = now()->subMinutes(30);
         $deliver_boys_list =DeliveryBoy::all();
         $orders = Order::where('status', 'pending')->get();
 
